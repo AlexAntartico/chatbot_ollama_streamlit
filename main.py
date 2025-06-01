@@ -3,7 +3,7 @@ import streamlit as st
 
 
 # Title
-st.title("Your Local LLL")
+st.title("Your Local LLM")
 
 # Chat init
 if "messages" not in st.session_state:
