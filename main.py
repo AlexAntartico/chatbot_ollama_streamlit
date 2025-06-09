@@ -1,6 +1,10 @@
 import ollama
 import streamlit as st
+import deepinfra_client
 
+
+# --- Config ---
+MODELS = ["deepseek-ai/DeepSeek-R1-0528", "Qwen/Qwen3-235B-A22B", "microsoft/phi-4-reasoning-plus"]
 
 # Title
 st.title("Your Local LLM")
@@ -43,6 +47,6 @@ if prompt := st.chat_input("What question you have for me?"):
         # add response
         message = st.write_stream(model_response())
         # add to history
-        st.session_state["messages"].append({"role": "assistant", "content": message})  
+        st.session_state["messages"].append({"role": "assistant", "content": message})
 
-        
+
